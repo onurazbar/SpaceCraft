@@ -8,8 +8,17 @@
 #ifndef GAME_HPP_INCLUDED
 #define GAME_HPP_INCLUDED
 
+#include <SFML/Graphics.hpp>
+
 class Game
 {
+private:
+
+    /**
+     * @brief Main game window.
+     */
+    sf::RenderWindow window;
+
 public:
 
     /**
