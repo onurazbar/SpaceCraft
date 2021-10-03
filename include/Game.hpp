@@ -9,6 +9,7 @@
 #define GAME_HPP_INCLUDED
 
 #include "Background.hpp"
+#include "SpaceCraft.hpp"
 
 class Game
 {
@@ -23,6 +24,11 @@ private:
      * @brief Background that displays space view.
      */
     Background background;
+
+    /**
+     * @brief Space craft of the game.
+     */
+    SpaceCraft space_craft;
 
 public:
 

@@ -42,6 +42,7 @@ void Game::play()
         window.clear();
 
         background.draw(window);
+        space_craft.draw(window);
 
         window.display();
     }
