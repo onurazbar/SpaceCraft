@@ -38,5 +38,11 @@ void Game::play()
                     break;
             }
         }
+
+        window.clear();
+
+        background.draw(window);
+
+        window.display();
     }
 }

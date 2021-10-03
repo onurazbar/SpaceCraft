@@ -8,7 +8,7 @@
 #ifndef GAME_HPP_INCLUDED
 #define GAME_HPP_INCLUDED
 
-#include <SFML/Graphics.hpp>
+#include "Background.hpp"
 
 class Game
 {
@@ -18,6 +18,11 @@ private:
      * @brief Main game window.
      */
     sf::RenderWindow window;
+
+    /**
+     * @brief Background that displays space view.
+     */
+    Background background;
 
 public:
 

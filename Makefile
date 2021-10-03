@@ -24,7 +24,10 @@ $(OBJDIR):
 $(OBJDIR)/Main.o: $(SRCDIR)/Main.cpp $(OBJDIR)/Game.o
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-$(OBJDIR)/Game.o: $(SRCDIR)/Game.cpp $(INCDIR)/Game.hpp
+$(OBJDIR)/Game.o: $(SRCDIR)/Game.cpp $(INCDIR)/Game.hpp $(OBJDIR)/Background.o
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+$(OBJDIR)/Background.o: $(SRCDIR)/Background.cpp $(INCDIR)/Background.hpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
