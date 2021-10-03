@@ -9,7 +9,7 @@
 
 Background::Background()
 {
-    if (!texture.loadFromFile("../images/space_re.png"))
+    if (!texture.loadFromFile("../images/space.png"))
     {
         throw "Could not load the image \"space.png\"!";
     }
