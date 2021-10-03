@@ -5,13 +5,20 @@
  *
  */
 
+#include "../include/Game.hpp"
+
 #include <iostream>
+#include <memory>
 
 int main()
 {
     try
     {
         std::cout << "Space Craft game!" << std::endl;
+
+        auto game = std::make_unique<Game>();
+
+        game->play();
     }
     catch (const char* ex)
     {

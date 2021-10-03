@@ -21,7 +21,10 @@ $(BINDIR):
 $(OBJDIR):
 	mkdir -p ./$(OBJDIR)
 
-$(OBJDIR)/Main.o: $(SRCDIR)/Main.cpp
+$(OBJDIR)/Main.o: $(SRCDIR)/Main.cpp $(OBJDIR)/Game.o
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+$(OBJDIR)/Game.o: $(SRCDIR)/Game.cpp $(INCDIR)/Game.hpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
