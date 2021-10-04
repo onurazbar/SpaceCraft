@@ -15,6 +15,11 @@ class SpaceCraft
 private:
 
     /**
+     * @brief Speed of the space craft.
+     */
+    float speed;
+
+    /**
      * @brief Texture of the space craft.
      */
     sf::Texture texture;
@@ -41,6 +46,17 @@ public:
      * @param window Main game window.
      */
     void draw(sf::RenderWindow& window);
+
+    /**
+     * @brief Moves the space craft according to current direction.
+     */
+    void move();
+
+    /**
+     * @brief Turns the space craft either left or right.
+     * @param turn_right Indicates that right key is pressed.
+     */
+    void turn(const bool& turn_right);
 };
 
 #endif /* SPACECRAFT_HPP_INCLUDED */

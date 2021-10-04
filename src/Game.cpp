@@ -22,9 +22,13 @@ void Game::play()
 {
     std::cout << "Game::play()" << std::endl;
 
+    sf::Time elapsed_time;
+    sf::Clock clock;
+
     while (window.isOpen())
     {
         sf::Event event;
+        sf::Time delta_time = clock.restart();
 
         while (window.pollEvent(event))
         {
@@ -34,10 +38,31 @@ void Game::play()
                     window.close();
                     break;
 
+                case sf::Event::KeyPressed:
+                    if (event.key.code == sf::Keyboard::Right)
+                    {
+                        space_craft.turn(true);
+                    }
+                    else if (event.key.code == sf::Keyboard::Left)
+                    {
+                        space_craft.turn(false);
+                    }
+                    else if (event.key.code == sf::Keyboard::Up)
+                    {
+                        space_craft.move();
+                    }
+                    else if (event.key.code == sf::Keyboard::Escape)
+                    {
+                        window.close();
+                    }
+                    break;
+
                 default:
                     break;
             }
         }
+
+        elapsed_time += delta_time;
 
         window.clear();
 
