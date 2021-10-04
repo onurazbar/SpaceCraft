@@ -10,6 +10,7 @@
 
 #include "Background.hpp"
 #include "SpaceCraft.hpp"
+#include "Fire.hpp"
 
 class Game
 {
@@ -29,6 +30,11 @@ private:
      * @brief Space craft of the game.
      */
     SpaceCraft space_craft;
+
+    /**
+     * @brief Fires of the game.
+     */
+    std::vector<Fire> fires;
 
 public:
 

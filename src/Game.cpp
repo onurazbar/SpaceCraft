@@ -69,6 +69,11 @@ void Game::play()
         background.draw(window);
         space_craft.draw(window);
 
+        for (auto& fire : fires)
+        {
+            fire.draw(window);
+        }
+
         window.display();
     }
 }
