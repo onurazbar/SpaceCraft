@@ -2,6 +2,6 @@
 
 ## Initial look
 
-![View_1](https://user-images.githubusercontent.com/34675907/135767997-5dd5cf04-1a3a-4f46-b5b5-5512fc78bddd.png)
+![View_1](https://user-images.githubusercontent.com/34675907/135908583-8330c8b5-6b11-46b1-9558-40a821f81225.png)
 
 In progress!
