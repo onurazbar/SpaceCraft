@@ -26,6 +26,11 @@ Fire::~Fire()
 {
 }
 
+sf::Sprite& Fire::getSprite()
+{
+    return sprite;
+}
+
 void Fire::draw(sf::RenderWindow& window)
 {
     window.draw(sprite);

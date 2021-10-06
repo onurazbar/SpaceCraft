@@ -7,7 +7,6 @@
 
 #include "../include/SpaceCraft.hpp"
 
-#include <iostream>
 #include <cmath>
 
 SpaceCraft::SpaceCraft(): speed(5.f)
@@ -49,8 +48,6 @@ void SpaceCraft::shoot(std::vector<std::shared_ptr<Fire>>& fires)
     float y = sprite.getPosition().y + (60 * std::sin(angle * M_PI / 180));
 
     fires.push_back(std::make_shared<Fire>(x, y, angle));
-
-    std::cout << "fires size: " << fires.size() << std::endl;
 }
 
 void SpaceCraft::turn(const bool& turn_right)

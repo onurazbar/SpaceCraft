@@ -18,6 +18,24 @@ Game::~Game()
 {
 }
 
+void Game::checkFireOutOfWindow()
+{
+    sf::Vector2u window_size = window.getSize();
+
+    for (unsigned int i = 0; i < fires.size(); i++)
+    {
+        sf::Vector2f position = fires[i]->getSprite().getPosition();
+
+        if ((position.x < 0) ||
+            (position.y < 0) ||
+            (position.x > window_size.x) ||
+            (position.y > window_size.y))
+        {
+            fires.erase(fires.begin() + i);
+        }
+    }
+}
+
 void Game::play()
 {
     std::cout << "Game::play()" << std::endl;
@@ -72,6 +90,8 @@ void Game::play()
         {
             fire->move(delta_time);
         }
+
+        checkFireOutOfWindow();
 
         window.clear();
 

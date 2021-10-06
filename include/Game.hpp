@@ -36,6 +36,11 @@ private:
      */
     std::vector<std::shared_ptr<Fire>> fires;
 
+    /**
+     * @brief Removes the fires whether inside the render window. Removes the fire if it is out.
+     */
+    void checkFireOutOfWindow();
+
 public:
 
     /**

@@ -42,6 +42,12 @@ public:
     ~Fire();
 
     /**
+     * @brief Gets sprite of the fire.
+     * @return Returns sprite.
+     */
+    sf::Sprite& getSprite();
+
+    /**
      * @brief Draws the space craft on window.
      * @param window Main game window.
      */
