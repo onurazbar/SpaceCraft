@@ -27,7 +27,7 @@ private:
 public:
 
     /**
-     * @brief Default constrcutor.
+     * @brief Default constructor.
      */
     Background();
 

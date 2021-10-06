@@ -34,12 +34,12 @@ private:
     /**
      * @brief Fires of the game.
      */
-    std::vector<Fire> fires;
+    std::vector<std::shared_ptr<Fire>> fires;
 
 public:
 
     /**
-     * @brief Default constrcutor.
+     * @brief Default constructor.
      */
     Game();
 

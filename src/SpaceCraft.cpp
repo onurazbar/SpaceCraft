@@ -41,6 +41,18 @@ void SpaceCraft::move()
     sprite.move(sf::Vector2f(x, y));
 }
 
+void SpaceCraft::shoot(std::vector<std::shared_ptr<Fire>>& fires)
+{
+    float angle = sprite.getRotation();
+
+    float x = sprite.getPosition().x + (60 * std::cos(angle * M_PI / 180));
+    float y = sprite.getPosition().y + (60 * std::sin(angle * M_PI / 180));
+
+    fires.push_back(std::make_shared<Fire>(x, y, angle));
+
+    std::cout << "fires size: " << fires.size() << std::endl;
+}
+
 void SpaceCraft::turn(const bool& turn_right)
 {
     float angle = sprite.getRotation();

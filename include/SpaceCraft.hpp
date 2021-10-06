@@ -8,7 +8,9 @@
 #ifndef SPACECRAFT_HPP_INCLUDED
 #define SPACECRAFT_HPP_INCLUDED
 
-#include <SFML/Graphics.hpp>
+#include "Fire.hpp"
+
+#include <memory>
 
 class SpaceCraft
 {
@@ -32,7 +34,7 @@ private:
 public:
 
     /**
-     * @brief Default constrcutor.
+     * @brief Default constructor.
      */
     SpaceCraft();
 
@@ -51,6 +53,12 @@ public:
      * @brief Moves the space craft according to current direction.
      */
     void move();
+
+    /**
+     * @brief Shoots the fires.
+     * @param fires Fires of the game.
+     */
+    void shoot(std::vector<std::shared_ptr<Fire>>& fires);
 
     /**
      * @brief Turns the space craft either left or right.

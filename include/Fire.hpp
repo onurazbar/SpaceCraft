@@ -15,7 +15,7 @@ class Fire
 private:
 
     /**
-     * @brief Speed of the space craft.
+     * @brief Speed of the fire.
      */
     float speed;
 
@@ -32,9 +32,9 @@ private:
 public:
 
     /**
-     * @brief Default constrcutor.
+     * @brief Parameterized constructor.
      */
-    Fire();
+    Fire(const float& x, const float& y, const float& angle);
 
     /**
      * @brief Destructor.
@@ -46,6 +46,12 @@ public:
      * @param window Main game window.
      */
     void draw(sf::RenderWindow& window);
+
+    /**
+     * @brief Moves the fire on its direction.
+     * @param delta_time Time elapsed since last frame.
+     */
+    void move(const sf::Time& delta_time);
 };
 
 #endif /* FIRE_HPP_INCLUDED */

@@ -51,6 +51,10 @@ void Game::play()
                     {
                         space_craft.move();
                     }
+                    else if (event.key.code == sf::Keyboard::Space)
+                    {
+                        space_craft.shoot(fires);
+                    }
                     else if (event.key.code == sf::Keyboard::Escape)
                     {
                         window.close();
@@ -64,6 +68,11 @@ void Game::play()
 
         elapsed_time += delta_time;
 
+        for (auto& fire : fires)
+        {
+            fire->move(delta_time);
+        }
+
         window.clear();
 
         background.draw(window);
@@ -71,7 +80,7 @@ void Game::play()
 
         for (auto& fire : fires)
         {
-            fire.draw(window);
+            fire->draw(window);
         }
 
         window.display();
