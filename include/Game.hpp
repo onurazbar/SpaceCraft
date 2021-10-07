@@ -43,7 +43,12 @@ private:
     std::vector<std::shared_ptr<Asteroid>> asteroids;
 
     /**
-     * @brief Removes the fires whether inside the render window. Removes the fire if it is out.
+     * @brief Checks the asteroids whether inside the render window. Removes the asteroid if it is out.
+     */
+    void checkAsteroidOutOfWindow();
+
+    /**
+     * @brief Checks the fires whether inside the render window. Removes the fire if it is out.
      */
     void checkFireOutOfWindow();
 

@@ -20,6 +20,24 @@ Game::~Game()
 {
 }
 
+void Game::checkAsteroidOutOfWindow()
+{
+    sf::Vector2u window_size = window.getSize();
+
+    for (unsigned int i = 0; i < asteroids.size(); i++)
+    {
+        sf::Vector2f position = asteroids[i]->getSprite().getPosition();
+
+        if ((position.x < -50) ||
+            (position.y < -50) ||
+            (position.x > (window_size.x + 50)) ||
+            (position.y > (window_size.y + 50)))
+        {
+            asteroids.erase(asteroids.begin() + i);
+        }
+    }
+}
+
 void Game::checkFireOutOfWindow()
 {
     sf::Vector2u window_size = window.getSize();
@@ -98,6 +116,7 @@ void Game::play()
             asteroid->move(delta_time);
         }
 
+        checkAsteroidOutOfWindow();
         checkFireOutOfWindow();
 
         window.clear();

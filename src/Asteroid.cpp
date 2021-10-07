@@ -32,6 +32,11 @@ Asteroid::~Asteroid()
 {
 }
 
+sf::Sprite& Asteroid::getSprite()
+{
+    return sprite;
+}
+
 void Asteroid::draw(sf::RenderWindow& window)
 {
     window.draw(sprite);

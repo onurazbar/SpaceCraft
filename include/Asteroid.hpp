@@ -52,6 +52,12 @@ public:
     ~Asteroid();
 
     /**
+     * @brief Gets sprite of the asteroid.
+     * @return Returns sprite.
+     */
+    sf::Sprite& getSprite();
+
+    /**
      * @brief Draws the space craft on window.
      * @param window Main game window.
      */
