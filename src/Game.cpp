@@ -93,6 +93,11 @@ void Game::play()
             fire->move(delta_time);
         }
 
+        for (auto& asteroid : asteroids)
+        {
+            asteroid->move(delta_time);
+        }
+
         checkFireOutOfWindow();
 
         window.clear();

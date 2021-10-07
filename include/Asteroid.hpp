@@ -15,12 +15,27 @@ class Asteroid
 private:
 
     /**
-     * @brief Texture of the space craft.
+     * @brief Angle for linear velocity.
+     */
+    float angle;
+
+    /**
+     * @brief Angular speed of the asteroid.
+     */
+    float angular_speed;
+
+    /**
+     * @brief Linear speed of the asteroid.
+     */
+    float linear_speed;
+
+    /**
+     * @brief Texture of the asteroid.
      */
     sf::Texture texture;
 
     /**
-     * @brief Sprite of the space craft.
+     * @brief Sprite of the asteroid.
      */
     sf::Sprite sprite;
 
@@ -41,6 +56,12 @@ public:
      * @param window Main game window.
      */
     void draw(sf::RenderWindow& window);
+
+    /**
+     * @brief Rotates and moves the asteroid.
+     * @param delta_time Time elapsed since last frame.
+     */
+    void move(const sf::Time& delta_time);
 };
 
 #endif /* ASTEROID_HPP_INCLUDED */
