@@ -1,6 +1,6 @@
 /*
  *
- * @file  Game.cpp
+ * @file  SpaceCraft.cpp
  * @biref This file contains the implementation of SpaceCraft class.
  *
  */

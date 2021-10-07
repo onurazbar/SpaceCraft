@@ -12,6 +12,8 @@
 Game::Game()
 {
     window.create(sf::VideoMode(1440, 900), "Space Craft Game");
+
+    asteroids.push_back(std::make_shared<Asteroid>());
 }
 
 Game::~Game()
@@ -101,6 +103,11 @@ void Game::play()
         for (auto& fire : fires)
         {
             fire->draw(window);
+        }
+
+        for (auto& asteroid : asteroids)
+        {
+            asteroid->draw(window);
         }
 
         window.display();

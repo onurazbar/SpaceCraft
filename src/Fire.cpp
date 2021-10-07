@@ -1,6 +1,6 @@
 /*
  *
- * @file  Game.cpp
+ * @file  Fire.cpp
  * @biref This file contains the implementation of Fire class.
  *
  */

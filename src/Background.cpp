@@ -1,6 +1,6 @@
 /*
  *
- * @file  Game.cpp
+ * @file  Background.cpp
  * @biref This file contains the implementation of Background class.
  *
  */

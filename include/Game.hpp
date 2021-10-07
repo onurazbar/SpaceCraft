@@ -11,6 +11,7 @@
 #include "Background.hpp"
 #include "SpaceCraft.hpp"
 #include "Fire.hpp"
+#include "Asteroid.hpp"
 
 class Game
 {
@@ -35,6 +36,11 @@ private:
      * @brief Fires of the game.
      */
     std::vector<std::shared_ptr<Fire>> fires;
+
+    /**
+     * @brief Asteroids of the game.
+     */
+    std::vector<std::shared_ptr<Asteroid>> asteroids;
 
     /**
      * @brief Removes the fires whether inside the render window. Removes the fire if it is out.

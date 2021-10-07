@@ -1,6 +1,6 @@
 /*
  *
- * @file  Game.hpp
+ * @file  SpaceCraft.hpp
  * @brief This file defines SpaceCraft class.
  *
  */

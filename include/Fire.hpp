@@ -1,6 +1,6 @@
 /*
  *
- * @file  Game.hpp
+ * @file  Fire.hpp
  * @brief This file defines Fire class.
  *
  */

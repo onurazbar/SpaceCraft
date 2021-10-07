@@ -1,6 +1,6 @@
 /*
  *
- * @file  Game.hpp
+ * @file  Background.hpp
  * @brief This file defines Background class.
  *
  */
