@@ -25,6 +25,11 @@ SpaceCraft::~SpaceCraft()
 {
 }
 
+sf::Sprite& SpaceCraft::getSprite()
+{
+    return sprite;
+}
+
 void SpaceCraft::draw(sf::RenderWindow& window)
 {
     window.draw(sprite);

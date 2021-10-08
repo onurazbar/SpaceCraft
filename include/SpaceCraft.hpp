@@ -44,6 +44,12 @@ public:
     ~SpaceCraft();
 
     /**
+     * @brief Gets sprite of the space craft.
+     * @return Returns sprite.
+     */
+    sf::Sprite& getSprite();
+
+    /**
      * @brief Draws the space craft on window.
      * @param window Main game window.
      */

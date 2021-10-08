@@ -11,7 +11,7 @@
 #include <cmath>
 #include <ctime>
 
-Asteroid::Asteroid(): angular_speed(200.f), linear_speed(100.f)
+Asteroid::Asteroid(const float& x, const float& y): angular_speed(200.f), linear_speed(100.f)
 {
     if (!texture.loadFromFile("../images/asteroid.png"))
     {
@@ -20,7 +20,7 @@ Asteroid::Asteroid(): angular_speed(200.f), linear_speed(100.f)
 
     sprite.setTexture(texture);
     sprite.setOrigin(sf::Vector2f(50, 40));
-    sprite.setPosition(sf::Vector2f(100, 100));
+    sprite.setPosition(sf::Vector2f(x, y));
 
     std::srand(std::time(0));
     float k = static_cast<float>(std::rand()) / RAND_MAX;

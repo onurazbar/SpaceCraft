@@ -52,6 +52,13 @@ private:
      */
     void checkFireOutOfWindow();
 
+    /**
+     * @brief Generates asteroids with one second intervals.
+     * @param elapsed_time Elapsed time since the beginning of the game.
+     * @param asteroid_generate_time The time when the last asteroid was generated.
+     */
+    void generateAsteroids(sf::Time& elapsed_time, sf::Time& asteroid_generate_time);
+
 public:
 
     /**

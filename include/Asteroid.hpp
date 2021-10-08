@@ -43,8 +43,10 @@ public:
 
     /**
      * @brief Parameterized constructor.
+     * @param x x position of the asteroid.
+     * @param y y position of the asteroid.
      */
-    Asteroid();
+    Asteroid(const float& x, const float& y);
 
     /**
      * @brief Destructor.
