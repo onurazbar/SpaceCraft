@@ -25,6 +25,11 @@ private:
     bool game_over;
 
     /**
+     * @brief Score of the game.
+     */
+    int score;
+
+    /**
      * @brief Main game window.
      */
     sf::RenderWindow window;

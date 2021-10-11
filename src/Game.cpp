@@ -11,9 +11,9 @@
 #include <cmath>
 #include <ctime>
 
-Game::Game(): game_over(false)
+Game::Game(): game_over(false), score(0)
 {
-    window.create(sf::VideoMode(1600, 940), "Space Craft Game");
+    window.create(sf::VideoMode(1600, 940), "Space Craft Game  -  Score: 0");
 
     std::srand(std::time(0));
 }
@@ -67,11 +67,14 @@ void Game::checkFireHitAsteroid()
             if (fires[i]->getSprite().getGlobalBounds().intersects(asteroids[j]->getSprite().getGlobalBounds()))
             {
                 sf::Vector2f position = asteroids[j]->getSprite().getPosition();
-
                 fires.erase(fires.begin() + i);
-                asteroids.erase(asteroids.begin() + i);
-
+                asteroids.erase(asteroids.begin() + j);
                 explosions.push_back(std::make_shared<Explosion>(position.x, position.y));
+
+                score++;
+                std::string str("Space Craft Game  -  Score: ");
+                str.append(std::to_string(score));
+                window.setTitle(str.c_str());
             }
         }
     }
@@ -221,7 +224,7 @@ void Game::play()
 
         if (game_over)
         {
-            message_box.draw(window, 100);
+            message_box.draw(window, score);
         }
 
         window.display();
