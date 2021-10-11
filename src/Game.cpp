@@ -58,6 +58,33 @@ void Game::checkFireOutOfWindow()
     }
 }
 
+void Game::checkFireHitAsteroid()
+{
+    for (unsigned int i = 0; i < fires.size(); i++)
+    {
+        for (unsigned int j = 0; j < asteroids.size(); j++)
+        {
+            if (fires[i]->getSprite().getGlobalBounds().intersects(asteroids[j]->getSprite().getGlobalBounds()))
+            {
+                sf::Vector2f position = asteroids[j]->getSprite().getPosition();
+
+                fires.erase(fires.begin() + i);
+                asteroids.erase(asteroids.begin() + i);
+
+                explosions.push_back(std::make_shared<Explosion>(position.x, position.y));
+            }
+        }
+    }
+
+    for (unsigned int i = 0; i < explosions.size(); i++)
+    {
+        if (explosions[i]->getCurrentFrame() == (explosions[i]->getFramesNumber() - 1))
+        {
+            explosions.erase(explosions.begin() + i);
+        }
+    }
+}
+
 void Game::generateAsteroids(sf::Time& elapsed_time, sf::Time& asteroid_generate_time)
 {
     if ((elapsed_time - asteroid_generate_time) > sf::seconds(2.f))
@@ -151,6 +178,12 @@ void Game::play()
 
         checkAsteroidOutOfWindow();
         checkFireOutOfWindow();
+        checkFireHitAsteroid();
+
+        for (auto& explosion : explosions)
+        {
+            explosion->updateFrame(elapsed_time);
+        }
 
         window.clear();
 
@@ -165,6 +198,11 @@ void Game::play()
         for (auto& asteroid : asteroids)
         {
             asteroid->draw(window);
+        }
+
+        for (auto& explosion : explosions)
+        {
+            explosion->draw(window);
         }
 
         window.display();

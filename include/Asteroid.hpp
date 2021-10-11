@@ -1,6 +1,6 @@
 /*
  *
- * @file  Game.hpp
+ * @file  Asteroid.hpp
  * @brief This file defines Asteroid class.
  *
  */

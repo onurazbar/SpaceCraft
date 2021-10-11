@@ -12,6 +12,7 @@
 #include "SpaceCraft.hpp"
 #include "Fire.hpp"
 #include "Asteroid.hpp"
+#include "Explosion.hpp"
 
 class Game
 {
@@ -43,6 +44,11 @@ private:
     std::vector<std::shared_ptr<Asteroid>> asteroids;
 
     /**
+     * @brief Explosions of the game.
+     */
+    std::vector<std::shared_ptr<Explosion>> explosions;
+
+    /**
      * @brief Checks the asteroids whether inside the render window. Removes the asteroid if it is out.
      */
     void checkAsteroidOutOfWindow();
@@ -51,6 +57,12 @@ private:
      * @brief Checks the fires whether inside the render window. Removes the fire if it is out.
      */
     void checkFireOutOfWindow();
+
+    /**
+     * @brief Checks the fires whether hits the asteroid. If there is a hit, asteroid and fire will be removed.
+     *        Then explosion animation will be sstarted.
+     */
+    void checkFireHitAsteroid();
 
     /**
      * @brief Generates asteroids with one second intervals.
