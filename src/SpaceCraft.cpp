@@ -9,7 +9,7 @@
 
 #include <cmath>
 
-SpaceCraft::SpaceCraft(): speed(5.f)
+SpaceCraft::SpaceCraft(): speed(7.5)
 {
     if (!texture.loadFromFile("../images/spacecraft.png"))
     {
@@ -61,10 +61,10 @@ void SpaceCraft::turn(const bool& turn_right)
 
     if (turn_right)
     {
-        sprite.setRotation(angle + 5.f);
+        sprite.setRotation(angle + 7.5);
     }
     else
     {
-        sprite.setRotation(angle - 5.f);
+        sprite.setRotation(angle - 7.5);
     }
 }

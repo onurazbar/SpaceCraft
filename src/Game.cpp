@@ -102,7 +102,7 @@ void Game::checkGameOver()
 
 void Game::generateAsteroids(sf::Time& elapsed_time, sf::Time& asteroid_generate_time)
 {
-    if ((elapsed_time - asteroid_generate_time) > sf::seconds(2.f))
+    if ((elapsed_time - asteroid_generate_time) > sf::seconds(1.5))
     {
         asteroid_generate_time = elapsed_time;
 
