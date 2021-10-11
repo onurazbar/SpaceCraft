@@ -11,7 +11,7 @@
 #include <cmath>
 #include <ctime>
 
-Game::Game()
+Game::Game(): game_over(false)
 {
     window.create(sf::VideoMode(1600, 940), "Space Craft Game");
 
@@ -81,6 +81,18 @@ void Game::checkFireHitAsteroid()
         if (explosions[i]->getCurrentFrame() == (explosions[i]->getFramesNumber() - 1))
         {
             explosions.erase(explosions.begin() + i);
+        }
+    }
+}
+
+void Game::checkGameOver()
+{
+    for (unsigned int i = 0; i < asteroids.size(); i++)
+    {
+        if (asteroids[i]->getSprite().getGlobalBounds().intersects(space_craft.getSprite().getGlobalBounds()))
+        {
+            game_over = true;
+            break;
         }
     }
 }
@@ -185,6 +197,8 @@ void Game::play()
             explosion->updateFrame(elapsed_time);
         }
 
+        checkGameOver();
+
         window.clear();
 
         background.draw(window);
@@ -205,6 +219,17 @@ void Game::play()
             explosion->draw(window);
         }
 
+        if (game_over)
+        {
+            message_box.draw(window, 100);
+        }
+
         window.display();
+
+        if (game_over)
+        {
+            sf::sleep(sf::milliseconds(5000));
+            window.close();
+        }
     }
 }

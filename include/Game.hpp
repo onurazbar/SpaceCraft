@@ -13,10 +13,16 @@
 #include "Fire.hpp"
 #include "Asteroid.hpp"
 #include "Explosion.hpp"
+#include "MessageBox.hpp"
 
 class Game
 {
 private:
+
+    /**
+     * @brief Indicates whether the game is ovver or not.
+     */
+    bool game_over;
 
     /**
      * @brief Main game window.
@@ -49,6 +55,11 @@ private:
     std::vector<std::shared_ptr<Explosion>> explosions;
 
     /**
+     * @brief Message box for game over case.
+     */
+    MessageBox message_box;
+
+    /**
      * @brief Checks the asteroids whether inside the render window. Removes the asteroid if it is out.
      */
     void checkAsteroidOutOfWindow();
@@ -63,6 +74,11 @@ private:
      *        Then explosion animation will be sstarted.
      */
     void checkFireHitAsteroid();
+
+    /**
+     * @brief Checks whether an asteroid hits the space craft.
+     */
+    void checkGameOver();
 
     /**
      * @brief Generates asteroids with one second intervals.

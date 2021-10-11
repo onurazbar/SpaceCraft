@@ -42,5 +42,8 @@ $(OBJDIR)/Asteroid.o: $(SRCDIR)/Asteroid.cpp $(INCDIR)/Asteroid.hpp
 $(OBJDIR)/Explosion.o: $(SRCDIR)/Explosion.cpp $(INCDIR)/Explosion.hpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
+$(OBJDIR)/MessageBox.o: $(SRCDIR)/MessageBox.cpp $(INCDIR)/MessageBox.hpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
 clean:
 	rm -rf $(BINDIR) $(OBJDIR)
