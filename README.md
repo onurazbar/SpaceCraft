@@ -53,3 +53,8 @@ Some gameplay videos are also below.
 ![View_4](https://github.com/onurazbar/SpaceCraft/blob/main/GameView/GamePlay_1.gif)
 
 ![View_5](https://github.com/onurazbar/SpaceCraft/blob/main/GameView/GamePlay_2.gif)
+
+
+## Notes
+
+I added the gameplay videos as gif for a better view, but sometimes gif videos require too much time to be loaded on browser. In such cases game could be seen as running a bit slow and this is related with browser rather than actual gameplay.
