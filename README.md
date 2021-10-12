@@ -42,4 +42,6 @@ Aim of the game is to shoot the asteroids by pressing space key and moving the s
 
 Some game scenes are below.
 
+![View_2](https://github.com/onurazbar/SpaceCraft/blob/main/GameView/View_2.png)
 
+![View_3](https://github.com/onurazbar/SpaceCraft/blob/main/GameView/View_3.png)
