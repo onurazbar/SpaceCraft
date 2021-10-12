@@ -32,3 +32,5 @@ This will remove **bin** and **obj** folders and all their contents. Then type *
 When you build the project, executable game file **spacecraft** will be created under **bin** folder. To run the game go to **bin** folder and run the executable file like below;
 
 **./spacecraft**
+
+Aim of the game is to shoot the asteroids by pressing space key and moving the space craft using arrow keys to escape from asteroids. Every time an asteroid is shot by fires of the space craft, game score is incremented and it is shown above next to the title.
