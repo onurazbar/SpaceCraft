@@ -24,8 +24,11 @@ If you want to make a clean build by removing output folders and files, type bel
 
 This will remove **bin** and **obj** folders and all their contents. Then type **make** commmand again.
 
-## Initial look
+![View_1](https://github.com/onurazbar/SpaceCraft/blob/main/GameView/View_1.png)
 
-![View_1](https://user-images.githubusercontent.com/34675907/135908583-8330c8b5-6b11-46b1-9558-40a821f81225.png)
 
-In progress!
+## Game Instructions
+
+When you build the project, executable game file **spacecraft** will be created under **bin** folder. To run the game go to **bin** folder and run the executable file like below;
+
+**./spacecraft**
