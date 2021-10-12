@@ -33,4 +33,9 @@ When you build the project, executable game file **spacecraft** will be created 
 
 **./spacecraft**
 
-Aim of the game is to shoot the asteroids by pressing space key and moving the space craft using arrow keys to escape from asteroids. Every time an asteroid is shot by fires of the space craft, game score is incremented and it is shown above next to the title.
+Aim of the game is to shoot the asteroids by pressing space key and moving the space craft using arrow keys to escape from asteroids. Every time an asteroid is shot by fires of the space craft, game score is incremented and it is shown above next to the game title. If an asteroid hits the space craft the game is over. When game is over a message box is displayed with game score and game window will be closed after 5 seconds.
+
+
+## Game Views
+
+### Game Scenes
